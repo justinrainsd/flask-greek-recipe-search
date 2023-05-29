@@ -1,0 +1,5 @@
+Flask application that serves as a Greek Recipe Dictionary. This was made using Python - Flask, HTML, and CSS.
+
+Future Updates
+- Search Functionality using java to create the search query
+- Images for the individual recipes
