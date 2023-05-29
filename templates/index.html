@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Greek Recipe Search</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/index.css') }}">
+</head>
+<body>
+    <h1>Greek Recipe Search</h1>
+
+    <div id="recipes">
+        {% if recipes %}
+            <h2>Recipes:</h2>
+            <div class="recipe-grid">
+                {% for recipe in recipes %}
+                    <div class="recipe-card"><a href="{{ url_for('recipe', recipe_id=loop.index-1) }}">{{ recipe['Recipe Title'] }}</a></div>
+                {% endfor %}
+            </div>
+            <div class="pagination">
+                {% if page > 1 %}
+                    <a href="{{ url_for('index', page=page-1) }}" class="prev">Previous</a>
+                {% endif %}
+                <div class="page-info">
+                    <span class="current-page">{{ page }}</span> of {{ total_pages }}
+                </div>
+                {% if page < total_pages %}
+                    <a href="{{ url_for('index', page=page+1) }}" class="next">Next</a>
+                {% endif %}
+            </div>
+        {% endif %}
+    </div>
+
+</body>
+</html>

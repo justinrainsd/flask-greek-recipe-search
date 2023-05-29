@@ -1,0 +1,57 @@
+/*index.html*/
+
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 20px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.recipe-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 20px;
+    justify-content: center; /* Center the grid horizontally */
+    margin-left: 20px; /* Add left margin */
+    margin-right: 20px; /* Add right margin */
+}
+
+.recipe-card {
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.recipe-card a {
+    color: #333;
+    text-decoration: none;
+}
+
+.recipe-card a:hover {
+    text-decoration: underline;
+}
+
+.pagination {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px; /* Add margin at the bottom */
+}
+
+.pagination a {
+    margin: 0 5px;
+}
+
+h2{
+    padding-left: 25px;
+}

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Recipe Details</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="recipe">
+        <h1><a href="{{ url_for('index') }}">Greek Recipe Search</a></h1>
+        <div class="recipe-content">
+            <div class="recipe-title">
+                <h2>{{ recipe['Recipe Title'] }}</h2>
+            </div>
+            <div class="ingredients">
+                <h3>Ingredients:</h3>
+                <ul>
+                    {% for ingredient in recipe['Ingredients'].split('\n') %}
+                        <li class="{% if loop.first and loop.last %}no-bullet{% endif %}">{{ ingredient }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+            
+            <div class="steps">
+                <h3>Steps:</h3>
+                <ol>
+                    {% for step in recipe['Steps'].split(',') %}
+                        <li><p>{{ step.strip() }}</p></li>
+                    {% endfor %}
+                </ol>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
