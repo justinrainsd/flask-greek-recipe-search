@@ -3,3 +3,8 @@ Flask application that serves as a Greek Recipe Dictionary. This was made using 
 Future Updates
 - Search Functionality using java to create the search query
 - Images for the individual recipes
+
+
+Improvements to be made
+- Due to the website structure the scraped data was pulled from, there will need to be an effort to go back and re-pull the data so that
+ingredients and steps can be better defined
